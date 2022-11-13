@@ -3,3 +3,16 @@ MY LEARNING LOG
 2. 更新状态：git status; git diff;
             git log; git reflog; git reset;
             
+            WORK_TREE -> STAGE（暂存区） -> MASTER_TREE
+            更新  add                  commit    (跟踪修改)
+
+            撤销操作：git checkout -- file(撤销工作区内容，回到上一次add或commit)
+                     git reset HEAD <file>(撤销stage内容到工作区，再丢弃工作区内容)
+                     提交到了版本库：版本回退 git reset --hard <版本id前几位>
+                     
+            删除操作：rm; git rm (commit); git 
+            误删恢复 git checkout -- <file>
+3. 分支：   创建分支 git checkout -b(create and switch to) "branch_name"
+            git branch 查看当前分支
+
+            

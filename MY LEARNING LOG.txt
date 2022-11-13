@@ -1,0 +1,5 @@
+MY LEARNING LOG
+1. 建立仓库：git init; git add; git commit -. <messege>
+2. 更新状态：git status; git diff;
+            git log; git reflog; git reset;
+            

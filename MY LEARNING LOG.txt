@@ -1,5 +1,6 @@
 MY LEARNING LOG
 1. 建立仓库：git init; git add; git commit -. <messege>
+
 2. 更新状态：git status; git diff;
             git log; git reflog; git reset;
             
@@ -12,7 +13,14 @@ MY LEARNING LOG
                      
             删除操作：rm; git rm (commit); git 
             误删恢复 git checkout -- <file>
-3. 分支：   创建分支 git checkout -b(create and switch to) "branch_name"
-            git branch 查看当前分支
 
-            
+3. 分支：   创建分支 git checkout -b(create and switch to) "branch_name"
+                    git switch <branch_name>
+            git branch 查看当前分支
+            git checkout/switch <branch_name> 切换到 branch_name
+            在此之前要先add, commit
+            git merge <branch_name> 把 branch_name 合并(fast-forward)
+            git branch -d <branch_name>(删除此分支) 
+
+            分支冲突：两个分支都有改动，修改无法自然合并时，需要手动合并     
+            git log --graph 查看分支合并图

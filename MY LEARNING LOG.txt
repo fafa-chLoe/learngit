@@ -31,4 +31,40 @@ MY LEARNING LOG
             1. git stash apply (恢复刚才工作区) + git stash drop (删除stash)
             2. git stash pop  (从刚才恢复工作区并删除stash内容)
             
-it log --graph 查看分支合并图
+            添加新功能(feature分支)： git switch -c feature-vulcae
+            丢弃未合并分支 git branch -D <branch_name>
+
+            多人协作与远程库：
+            git remote(查看远程库信息)
+            git push origin <branch_name> 推送相应分支到远程库
+            git clone (目标地址)
+            git checkout -b dev origin/dev 创建远程origin的dev分支到本地 
+            冲突解决：pull抓取远程更新在本地合并解决冲突
+            总结：1. git push 推送自己的修改
+                 2. 若推送失败尝试合并（git pull)
+                 3. 若合并冲突，本地解决并提交
+                 4. git oush
+                
+            rebase: 
+             ?? 不懂
+        
+4. 标签管理: 版本库的一个快照，一个让人能记住的commit(版本号)eg. tag v1.2
+            创建：  1. 切换到需要打标签的分支
+                    2. git tag <tag_name>
+                    3. 标签打在最新提交的 commit 上
+                    or
+                    1. git log 找到历史提交 commit id
+                    2. git tag <tag_name> <commit_id>
+
+            git tag可以查看标签，按字母排序
+
+            带有说明的标签：
+                1. 创建 git tag -a <tag_name> -m "说明" <commit_id>
+                2. 查看 git show <tag_name>
+
+            标签与commit挂钩，注意其与分支的关系   
+
+            删除： git tag -d <tag_name>
+            推送: git push origin <tag_name>
+                    git push origin --tags(推送全部本地未推送标签)
+            删除远程： 1. 本地删除； 2. git push origin :refs/tags/<tag_name>
